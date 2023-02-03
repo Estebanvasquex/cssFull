@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    margin: 500px auto;
+    width: 400px;
+    height: 500px;
+    border: 4px solid;
+
+}
+
+.position{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(3, 21, 49);
+    color: white;
+    font-size: 1.3rem;
+     line-height: 100px; /*cetra el elemento verticalmente */
+     text-align: center; /*cetra el elemento horizontalmente */
+
+    /* static es la posicion por defecto de los object-position */
+
+}
+
+
+/* relative  se desplaza dependiendo de su posición original*/
+.relative{
+    background-color: rgb(4, 162, 22);
+    border-top: 3px solid red;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 30px;
+    left: 0;
+
+}
+
+/* absolute  se desplaza dependiendo de su padre si su padre es relative toma el tamaño para su posicionamiento pero si no hay ningun padre con position relative toma por último el body*/
+
+.absolute{
+    /*width: auto;*/
+    /*height: auto;*/
+    background-color: rgb(37, 37, 109);
+    position: absolute;
+    top:20px ;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+/* se posiciona en base al viewport en base al body, se fija en el navegador  si hay un padre que tenga un transfor diferente a none pasa al tamaño de su padre*/
+.fixed{
+    width: auto;
+    height: auto;
+    background-color: coral;
+    position: fixed;
+    
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+
+}
+
+/* Es una mescla entre relative y fixed es tratado como un elemento no posicionado por defecto, pero cuando definimos las propiedades offset entonces se establece un rango y mientras se cumpla con ese rango el elemento se mantendrá fijo por la pantalla cuando se pasa de un umbral se queda fijo, ejempo  top: 40px solo hasta que tenga 40px en la parte superior será el desplazamiento*/
+
+
+.sticky{
+    background-color: crimson;
+    position: sticky;
+    top: 20px;
+
+}
+
+/* z-index se recomienda que sea de 10 en 10 para que los nuevos elementos se puedan poner detras odelante */
